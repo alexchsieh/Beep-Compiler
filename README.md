@@ -1,3 +1,52 @@
+Ever wanted to build your own compiler? My group did! This is our attempt. Try our Beep Compiler -- A compiler that reads basic C++ syntax :)
+
+## Installation
+
+clone this repo
+
+```sh
+git clone https://github.com/alexchsieh/Beep-Compiler.git
+```
+
+## Tools
+
+install flex (2.5.37)
+
+```sh
+sudo apt install flex-old
+```
+
+install bison (3.0.4)
+
+```sh
+sudo apt install bison
+```
+
+## Usage example
+
+might need to give the file permissions
+```sh
+chmod 777 ./mil_run
+```
+
+having our parser print the .min version of the code and converting it to .mil
+```sh
+cat ../programs/add.beep | parser >> add.mil
+```
+
+using mil interpreter to run the .mil file
+```sh
+mil_run add.mil
+```
+
+sample output
+```
+150
+```
+
+### Disclaimer
+The code works with flex-old and is incompatible with flex, due to the updates with how flex registers blank space characters.
+
 # Beep Compiler Project: Phase 4
 ## Language Name: BEEP-L
 ## Compiler Name: BEEP-LC
